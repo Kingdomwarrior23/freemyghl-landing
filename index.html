@@ -16,17 +16,26 @@
 <meta name="description" content="FreeMyGHL exports GoHighLevel AI Studio sites to ZIP, GitHub, Netlify, Vercel, or Cloudflare Pages in one click. Multi-page funnel crawl. Live preview. $47 one-time, no subscription.">
 <link rel="canonical" href="https://freemyghl.com/">
 
+<!-- Favicon / app icons -->
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-64.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+
 <!-- Open Graph -->
 <meta property="og:title" content="FreeMyGHL — Own Your GoHighLevel Code Forever">
 <meta property="og:description" content="One Chrome extension exports your entire GHL AI Studio site — ZIP, GitHub, Netlify, Vercel, Cloudflare. Multi-page crawl. Live preview. $47 one-time, updates while actively maintained.">
 <meta property="og:url" content="https://freemyghl.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="FreeMyGHL">
+<meta property="og:image" content="https://freemyghl.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 
 <!-- Twitter/X -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="FreeMyGHL — Export Your GHL Sites Forever">
 <meta name="twitter:description" content="Export any GoHighLevel AI Studio site to ZIP, GitHub, or 4 live platforms. Multi-page crawl. Live preview. $47 one-time.">
+<meta name="twitter:image" content="https://freemyghl.com/assets/og-image.jpg">
 
 <!-- Schema: SoftwareApplication + Organization + FAQPage -->
 <script type="application/ld+json">
@@ -190,8 +199,9 @@ nav {
 }
 .nav-logo-icon {
   width: 28px; height: 28px; border-radius: 8px;
-  background: var(--grad); display: grid; place-items: center; flex-shrink: 0;
+  overflow: hidden; flex-shrink: 0;
 }
+.nav-logo-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
 .nav-links a {
   font-size: 13.5px; font-weight: 500; color: var(--ink-2);
@@ -585,9 +595,7 @@ footer { border-top: 1px solid var(--border); padding: 28px 0; background: var(-
   <div class="nav-inner">
     <a href="/" class="nav-logo">
       <div class="nav-logo-icon">
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-          <path d="M2 7h10M7 2l5 5-5 5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        <img src="/assets/logo-256.png" alt="FreeMyGHL" width="28" height="28">
       </div>
       FreeMyGHL
     </a>
