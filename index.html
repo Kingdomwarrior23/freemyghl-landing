@@ -133,7 +133,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -164,7 +164,7 @@
 
 html { scroll-behavior: smooth; }
 body {
-  font-family: 'Geist', -apple-system, sans-serif;
+  font-family: 'Outfit', -apple-system, sans-serif;
   background: var(--bg);
   color: var(--ink);
   line-height: 1.6;
@@ -285,7 +285,7 @@ nav {
   font-size: 15px; font-weight: 700; padding: 14px 26px;
   border-radius: var(--radius); text-decoration: none;
   transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-  white-space: nowrap; border: none; cursor: pointer; font-family: 'Geist', sans-serif;
+  white-space: nowrap; border: none; cursor: pointer; font-family: 'Outfit', sans-serif;
 }
 .btn-primary:hover {
   background: #2563eb; transform: translateY(-2px);
@@ -338,11 +338,11 @@ nav {
 .ext-dot:nth-child(1) { background: #ef4444; }
 .ext-dot:nth-child(2) { background: #f59e0b; }
 .ext-dot:nth-child(3) { background: #22c55e; }
-.ext-title { font-size: 12px; font-weight: 600; color: var(--ink-2); font-family: 'Geist Mono', monospace; }
+.ext-title { font-size: 12px; font-weight: 600; color: var(--ink-2); font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace; }
 .ext-body { padding: 16px; }
 .ext-url {
   background: var(--bg-2); border: 1px solid var(--border); border-radius: 8px;
-  padding: 7px 10px; font-family: 'Geist Mono', monospace; font-size: 11px;
+  padding: 7px 10px; font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace; font-size: 11px;
   color: var(--blue); margin-bottom: 14px; overflow: hidden;
   text-overflow: ellipsis; white-space: nowrap;
 }
@@ -358,11 +358,11 @@ nav {
 .ext-rows { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
 .ext-row { display: flex; align-items: center; justify-content: space-between; font-size: 12px; }
 .ext-row-label { color: var(--ink-2); }
-.ext-row-val { font-weight: 700; color: var(--ink); font-family: 'Geist Mono', monospace; font-size: 13px; }
+.ext-row-val { font-weight: 700; color: var(--ink); font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace; font-size: 13px; }
 .ext-btn {
   width: 100%; border: none; border-radius: 10px; padding: 11px;
   font-size: 13px; font-weight: 700; cursor: pointer;
-  font-family: 'Geist', sans-serif; color: #fff;
+  font-family: 'Outfit', sans-serif; color: #fff;
   background: linear-gradient(90deg, var(--blue), var(--teal));
   transition: opacity 0.2s, transform 0.15s;
 }
@@ -428,7 +428,7 @@ nav {
 .step:nth-child(2) .step-icon { background: var(--teal-dim); border-color: rgba(45,212,191,0.2); color: var(--teal); }
 .step-title { font-size: 18px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 10px; }
 .step-body { font-size: 14px; color: var(--ink-2); line-height: 1.65; }
-.step-time { margin-top: 16px; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); font-family: 'Geist Mono', monospace; }
+.step-time { margin-top: 16px; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace; }
 
 /* ── Features bento ──────────────────────────────────────────── */
 .features-section { padding: 100px 0; border-top: 1px solid var(--border); }
@@ -449,7 +449,7 @@ nav {
 .bento-title { font-size: 20px; font-weight: 700; letter-spacing: -0.025em; margin-bottom: 10px; }
 .bento-body { font-size: 14px; color: var(--ink-2); line-height: 1.65; max-width: 380px; }
 .bento-tag-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 20px; }
-.bento-tag { font-size: 11.5px; font-weight: 500; color: var(--ink-3); background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 3px 9px; font-family: 'Geist Mono', monospace; }
+.bento-tag { font-size: 11.5px; font-weight: 500; color: var(--ink-3); background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 3px 9px; font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace; }
 .bento-d-logos { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
 .bento-d-logo { display: flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 600; color: var(--ink-2); }
 
@@ -487,7 +487,7 @@ nav {
 .pricing-cta-btn {
   display: block; width: 100%; color: #fff; font-size: 15px; font-weight: 700;
   padding: 14px; border-radius: 10px; text-decoration: none; text-align: center;
-  border: none; cursor: pointer; font-family: 'Geist', sans-serif;
+  border: none; cursor: pointer; font-family: 'Outfit', sans-serif;
   background: linear-gradient(90deg, var(--blue), var(--teal));
   transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
 }
@@ -524,7 +524,7 @@ nav {
 .faq-list { list-style: none; }
 .faq-item { border-bottom: 1px solid var(--border); }
 .faq-item:first-child { border-top: 1px solid var(--border); }
-.faq-q { width: 100%; background: transparent; border: none; cursor: pointer; text-align: left; padding: 18px 0; display: flex; align-items: center; justify-content: space-between; gap: 12px; font-family: 'Geist', sans-serif; font-size: 15px; font-weight: 600; color: var(--ink); transition: color 0.2s; }
+.faq-q { width: 100%; background: transparent; border: none; cursor: pointer; text-align: left; padding: 18px 0; display: flex; align-items: center; justify-content: space-between; gap: 12px; font-family: 'Outfit', sans-serif; font-size: 15px; font-weight: 600; color: var(--ink); transition: color 0.2s; }
 .faq-q:hover { color: var(--teal); }
 .faq-arrow { color: var(--ink-3); flex-shrink: 0; transition: transform 0.25s, color 0.2s; }
 .faq-item.open .faq-arrow { transform: rotate(45deg); color: var(--teal); }
