@@ -5,7 +5,7 @@ Source file for [freemyghl.com](https://freemyghl.com).
 ## Features (v3.7.x)
 - AI Studio export (GHL Vibe builder)
 - Legacy funnel / website / blog capture
-- GitHub, Netlify, Vercel, GH Pages, Cloudflare Pages export
+- GitHub, GitHub Pages, Netlify, Vercel export
 - Live preview
 - ZIP export
 - License gate ($47 one-time)
