@@ -37,6 +37,10 @@
 <meta name="twitter:description" content="Export any GoHighLevel AI Studio site to ZIP, GitHub, or 3 live platforms. Multi-page crawl. Own your code forever. $47 one-time.">
 <meta name="twitter:image" content="https://freemyghl.com/assets/og-image.jpg">
 
+<!-- Cloudflare Web Analytics — FREE, privacy-first. Hermes: enable it for freemyghl.com in the CF dashboard,
+     paste the beacon token below, then uncomment this line so we can measure the Freedom Sale traffic. -->
+<!-- <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "PASTE_TOKEN_HERE"}'></script> -->
+
 <!-- Schema: SoftwareApplication + Organization + FAQPage -->
 <script type="application/ld+json">
 {
@@ -649,6 +653,23 @@ footer { border-top: 1px solid var(--border); padding: 28px 0; background: var(-
   .trust-logos { gap: 16px; }
 }
 
+/* ── SALE MODE: Freedom Sale countdown + sticky CTA (remove whole block when sale ends) ── */
+.countdown { display:inline-flex; gap:8px; margin:18px 0 2px; }
+.cd-unit { display:flex; flex-direction:column; align-items:center; min-width:52px; padding:8px 6px; border-radius:10px; background:linear-gradient(160deg, rgba(220,38,38,0.16), rgba(37,99,235,0.16)); border:1px solid rgba(244,244,245,0.16); }
+.cd-num { font-size:22px; font-weight:800; color:#f4f4f5; line-height:1; font-variant-numeric:tabular-nums; }
+.cd-lbl { font-size:9px; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-3); margin-top:5px; }
+.countdown.ended .cd-unit { opacity:0.5; }
+.countdown-note { font-size:11.5px; color:var(--ink-3); margin:6px 0 2px; }
+
+.sticky-cta { position:fixed; left:0; right:0; bottom:0; z-index:60; transform:translateY(115%); transition:transform .35s ease; background:rgba(9,9,11,0.93); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); border-top:2px solid transparent; border-image:linear-gradient(90deg,#dc2626,#f4f4f5,#2563eb) 1; padding:10px 18px; }
+.sticky-cta.show { transform:translateY(0); }
+.sticky-inner { max-width:1120px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:14px; }
+.sticky-txt { font-size:13px; color:var(--ink-2); display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+.sticky-txt strong { color:#f4f4f5; }
+.sticky-mini { font-variant-numeric:tabular-nums; color:var(--teal); font-weight:700; font-size:12.5px; }
+.sticky-cta .btn-primary { padding:9px 18px; font-size:13px; white-space:nowrap; }
+@media (max-width:640px){ .sticky-hide-sm{display:none;} .cd-unit{min-width:44px;} .sticky-txt{gap:6px;} }
+
 /* ── SALE MODE: Founding Member popup (remove whole block when sale ends) ── */
 .sale-popup-overlay {
   position: fixed; inset: 0; z-index: 999; background: rgba(5,5,8,0.72);
@@ -715,7 +736,7 @@ footer { border-top: 1px solid var(--border); padding: 28px 0; background: var(-
       <li><a href="#pricing">Pricing</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
-    <a href="#pricing" class="nav-cta">Founding Member — $27</a>
+    <a href="#pricing" class="nav-cta">Freedom Sale — $27</a>
   </div>
 </nav>
 
@@ -725,7 +746,7 @@ footer { border-top: 1px solid var(--border); padding: 28px 0; background: var(-
     <div class="hero-copy">
       <div class="hero-badge">
         <div class="hero-badge-dot"></div>
-        <span class="hero-badge-text">🇺🇸 Founding Member Sale &nbsp;·&nbsp; $27 (reg. $47) &nbsp;·&nbsp; Ends Monday night</span>
+        <span class="hero-badge-text">🎆 Freedom Sale &nbsp;·&nbsp; $27 (reg. $47) &nbsp;·&nbsp; Ends Sunday night</span>
       </div>
       <h1>Your GHL sites.<br><span class="accent">Freed.</span></h1>
       <p class="hero-sub">One click exports your entire GoHighLevel AI Studio site — HTML, CSS, JS, images, fonts, schemas. Yours forever, no matter what happens to your subscription.</p>
@@ -736,6 +757,13 @@ footer { border-top: 1px solid var(--border); padding: 28px 0; background: var(-
         </a>
         <a href="#how" class="btn-ghost">See how it works</a>
       </div>
+      <div class="countdown" id="cd" aria-label="Time left in the Freedom Sale">
+        <div class="cd-unit"><span class="cd-num" id="cd-d">--</span><span class="cd-lbl">Days</span></div>
+        <div class="cd-unit"><span class="cd-num" id="cd-h">--</span><span class="cd-lbl">Hrs</span></div>
+        <div class="cd-unit"><span class="cd-num" id="cd-m">--</span><span class="cd-lbl">Min</span></div>
+        <div class="cd-unit"><span class="cd-num" id="cd-s">--</span><span class="cd-lbl">Sec</span></div>
+      </div>
+      <div class="countdown-note" id="cd-note">🎆 Freedom Sale ends Sunday, July 5 · 11:59pm CT</div>
       <div class="hero-trust">
         <span>No subscription</span>
         <span class="hero-trust-sep">·</span>
@@ -920,8 +948,8 @@ footer { border-top: 1px solid var(--border); padding: 28px 0; background: var(-
 
 <!--
   ══════════════════════════════════════════════════════════════════
-  SALE MODE — Founding Member weekend sale ($47 → $27, first 100 /
-  ends Monday night). Everything between here and the matching
+  SALE MODE — Freedom Sale / Founding Member ($47 → $27, first 100 /
+  ends Sunday July 5 night). Everything between here and the matching
   "END SALE MODE" comment below should be reverted to the regular
   $47 price once the sale window closes. No further discounts after
   this one — see project memory for why.
@@ -933,7 +961,7 @@ footer { border-top: 1px solid var(--border); padding: 28px 0; background: var(-
 
     <div class="pricing-left reveal">
       <p class="section-eyebrow">Pricing</p>
-      <h2>Founding Member price.<br>Ends Monday night.</h2>
+      <h2>Founding Member price.<br>Ends Sunday night.</h2>
       <p>$27 through the weekend, first 100 Founding Members only. Regular price is $47 — no subscription, no renewal, no seat limits, ever.</p>
       <div class="compare-box">
         <div class="compare-row" style="background:rgba(255,255,255,0.03);font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-3);">
@@ -976,7 +1004,7 @@ footer { border-top: 1px solid var(--border); padding: 28px 0; background: var(-
     </div>
 
     <div class="pricing-card reveal d1">
-      <div class="pricing-badge">🇺🇸 Founding Member — Ends Monday</div>
+      <div class="pricing-badge">🎆 Freedom Sale — Ends Sunday</div>
       <div class="pricing-price"><span class="price-was">$47</span><span>$</span>27</div>
       <p class="pricing-note">First 100 Founding Members only. Then it's back to $47, for good.</p>
       <ul class="pricing-feats">
@@ -1172,7 +1200,7 @@ footer { border-top: 1px solid var(--border); padding: 28px 0; background: var(-
 <section class="final-cta">
   <div class="final-cta-inner">
     <h2 class="reveal">Your work.<br>Your code.<br>Forever.</h2>
-    <p class="reveal d1">GHL can't take it back if you export it first. Founding Member pricing ends Monday night.</p>
+    <p class="reveal d1">GHL can't take it back if you export it first. Founding Member pricing ends Sunday night.</p>
     <div class="final-cta-actions reveal d2">
       <a href="#pricing" class="btn-primary" id="buy-btn-2">
         Claim Founding Member Pricing — $27
@@ -1200,9 +1228,9 @@ footer { border-top: 1px solid var(--border); padding: 28px 0; background: var(-
   <div class="sale-popup-card">
     <div class="firework-burst" id="fireworkBurst"></div>
     <button class="sale-popup-close" id="salePopupClose" aria-label="Close">&times;</button>
-    <div class="sale-popup-flag">🇺🇸</div>
+    <div class="sale-popup-flag">🎆</div>
     <h3>Your GHL AI Studio projects. Freed.</h3>
-    <p class="sale-popup-sub">Founding Member pricing ends Monday night.</p>
+    <p class="sale-popup-sub">Founding Member pricing ends Sunday night.</p>
     <p class="sale-popup-price"><span class="was">$47</span><span class="now">$27</span> — one time, yours forever</p>
     <p class="sale-popup-scarcity">First 100 Founding Members only.</p>
     <a href="#pricing" class="btn-primary" id="salePopupCta" style="width:100%;justify-content:center;margin-bottom:4px;">Claim Founding Member Pricing</a>
@@ -1279,6 +1307,55 @@ document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
   document.getElementById('salePopupDismiss').addEventListener('click', hidePopup);
   document.getElementById('salePopupCta').addEventListener('click', hidePopup);
   popup.addEventListener('click', function (e) { if (e.target === popup) hidePopup(); });
+})();
+</script>
+
+<!-- SALE MODE: Freedom Sale sticky CTA (remove whole block when sale ends) -->
+<div class="sticky-cta" id="stickyCta">
+  <div class="sticky-inner">
+    <div class="sticky-txt"><span>🎆 <strong>Freedom Sale</strong> — Founding price <strong>$27</strong> <span class="sticky-hide-sm">(reg. $47)</span></span><span class="sticky-mini" id="cd-mini"></span></div>
+    <a href="#pricing" class="btn-primary">Claim it&nbsp;→</a>
+  </div>
+</div>
+
+<!-- SALE MODE: Freedom Sale countdown + sticky logic (remove whole block when sale ends) -->
+<script>
+(function () {
+  // Sun, Jul 5 2026, 11:59pm America/Chicago (CDT = UTC-5) → 2026-07-06T04:59:00Z
+  var DEADLINE = Date.UTC(2026, 6, 6, 4, 59, 0);
+  var d = document.getElementById('cd-d'), h = document.getElementById('cd-h'),
+      m = document.getElementById('cd-m'), s = document.getElementById('cd-s'),
+      note = document.getElementById('cd-note'), cd = document.getElementById('cd'),
+      mini = document.getElementById('cd-mini');
+  function pad(n){ return (n < 10 ? '0' : '') + n; }
+  function tick() {
+    var left = DEADLINE - Date.now();
+    if (left <= 0) {
+      if (cd) cd.classList.add('ended');
+      if (d) { d.textContent = h.textContent = m.textContent = s.textContent = '00'; }
+      if (note) note.textContent = 'The Freedom Sale has ended — regular price is back.';
+      if (mini) mini.textContent = 'ended';
+      return true;
+    }
+    var days = Math.floor(left / 86400000),
+        hrs  = Math.floor(left % 86400000 / 3600000),
+        mins = Math.floor(left % 3600000 / 60000),
+        secs = Math.floor(left % 60000 / 1000);
+    if (d) { d.textContent = pad(days); h.textContent = pad(hrs); m.textContent = pad(mins); s.textContent = pad(secs); }
+    if (mini) mini.textContent = 'ends in ' + (days > 0 ? days + 'd ' : '') + pad(hrs) + ':' + pad(mins) + ':' + pad(secs);
+    return false;
+  }
+  if (!tick()) { var iv = setInterval(function(){ if (tick()) clearInterval(iv); }, 1000); }
+
+  // Sticky CTA appears once the visitor scrolls past the hero
+  var sticky = document.getElementById('stickyCta');
+  if (sticky) {
+    var onScroll = function () {
+      if (window.scrollY > 700) sticky.classList.add('show'); else sticky.classList.remove('show');
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
 })();
 </script>
 
