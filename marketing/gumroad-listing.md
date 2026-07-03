@@ -20,10 +20,9 @@ FreeMyGHL fixes that. Open any GHL AI Studio site, click once, and walk away wit
 **What you can do**
 - Download your full site as a clean ZIP
 - Push it straight to a GitHub repo
-- Deploy live to Netlify, Vercel, or GitHub Pages — no command line
-- Crawl an entire multi-page funnel in one run
-- Export the editable React/Vite source (Dev mode)
-- Works beyond GHL too: Lovable, Bolt, v0, Framer, Webflow
+- Deploy live to Netlify or Vercel — no command line
+- Crawl your entire multi-page AI Studio project in one run
+- Export the real editable source code — the React/Vite project behind your site, great for full apps
 
 **What you get**
 - The FreeMyGHL Chrome extension (Chrome, Brave, Edge)
@@ -35,19 +34,19 @@ FreeMyGHL fixes that. Open any GHL AI Studio site, click once, and walk away wit
 
 **Install in 2 minutes:** unzip → open `chrome://extensions` → turn on Developer mode → Load unpacked → pick the folder. Full steps are in the download.
 
-30-day money-back guarantee. Questions? hello@freemyghl.com
+If FreeMyGHL doesn't export your site, email us and we'll make it right or refund you. Questions? hello@freemyghl.com
 
 ---
 
 ## ⚙️ Gumroad SETTINGS CHECKLIST (do these when creating the product)
 1. **Type:** Digital product.
-2. **Upload file:** `C:\Users\kingd\Downloads\FreeMyGHL-v3.1.1.zip`
+2. **Upload file:** `C:\Users\kingd\Downloads\FreeMyGHL-v3.1.2.zip`
 3. **Price:** 27 (USD).
 4. **License keys:** turn ON **"Generate a unique license key per sale"** (under the product's checkout options). ← REQUIRED — this is what the Worker reads.
 5. **Receipt / post-purchase message:** paste the short install steps (unzip → chrome://extensions → Developer mode → Load unpacked).
 6. **Webhook / Ping:** Settings → Advanced → **Ping URL** = `https://fmghl-license.ignitiv.io/webhook/gumroad`
    (This fires on each sale so the Worker records the key in KV.)
-7. **Refund policy:** 30 days.
+7. **Refund policy:** honor the functionality guarantee — fix-or-refund if it doesn't export their site. (Set Gumroad's refund window to your preference; the stated promise is functionality, not buyer's-remorse.)
 8. Grab the product URL when published → send it to Claude to wire the site's buy button.
 
 ## Voice check (FreeMyGHL — pre-approved)
